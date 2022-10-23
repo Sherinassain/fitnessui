@@ -1,6 +1,7 @@
 import 'package:fitnessui/pages/constants.dart';
 import 'package:fitnessui/pages/container/home/burned_eatan_container.dart';
 import 'package:fitnessui/pages/container/home/cal_protein_fat_container.dart';
+import 'package:fitnessui/pages/container/home/meals_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -286,119 +287,59 @@ class Diary_page extends StatelessWidget {
                   SizedBox(
                     height: screensize.width * 0.04,
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: screensize.width * 0.05),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Stack(
-                          children: [
-                            Container(
-                              margin:
-                                  EdgeInsets.only(top: screensize.width * 0.07),
-                              width: screensize.width * 0.34,
-                              height: screensize.width * 0.48,
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Color.fromARGB(255, 15, 133, 230),
-                                    Color.fromARGB(255, 2, 50, 88)
-                                  ]),
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(70),
-                                      topLeft: Radius.circular(8),
-                                      bottomLeft: Radius.circular(8),
-                                      bottomRight: Radius.circular(8))),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: screensize.width * 0.2,
-                                    height: screensize.width * 0.14,
-                                    decoration: BoxDecoration(
-                                        color:
-                                            Color.fromARGB(255, 84, 166, 233),
-                                        borderRadius: BorderRadius.only(
-                                            topRight: Radius.circular(20),
-                                            topLeft: Radius.circular(8),
-                                            bottomLeft: Radius.circular(90),
-                                            bottomRight: Radius.circular(100))),
-                                  ),
-                                  //texts
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        left: screensize.width * 0.05),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        SizedBox(
-                                          height: screensize.width * 0.03,
-                                        ),
-                                        Text(
-                                          'Breakfast',
-                                          style: TextStyle(
-                                              color: constantwhite,
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 18),
-                                        ),
-                                        SizedBox(
-                                          height: screensize.width * 0.02,
-                                        ),
-                                        Text(
-                                          'Bread\nPeanut butter\nApple',
-                                          style: TextStyle(
-                                              color: constantwhite,
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 13),
-                                        ),
-                                        SizedBox(
-                                          height: screensize.width * 0.03,
-                                        ),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              '525',
-                                              style: TextStyle(
-                                                  color: constantwhite,
-                                                  fontWeight: FontWeight.w600,
-                                                  fontSize: 24),
-                                            ),
-                                            SizedBox(
-                                              width: screensize.width * 0.017,
-                                            ),
-                                            Text(
-                                              'kcal',
-                                              style: TextStyle(
-                                                  color: constantwhite,
-                                                  fontWeight: FontWeight.w600,
-                                                  fontSize: 13),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Positioned(
-                              bottom: screensize.width * 0.39,
-                              child: Container(
-                                width: screensize.width * 0.2,
-                                height: screensize.width * 0.16,
-                                decoration: BoxDecoration(
-                                    color: Colors.transparent,
-                                    image: DecorationImage(
-                                        image:
-                                            AssetImage('assets/breakfast.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+                  Container(
+                      width: double.infinity,
+                      height: screensize.width * 0.59,
+                      decoration: BoxDecoration(color: Colors.transparent),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Meals_container(
+                              semicirclecolor:
+                                  Color.fromARGB(255, 92, 167, 228),
+                              maincontainercolor2:
+                                  Color.fromARGB(255, 17, 123, 209),
+                              maincontainercolor1:
+                                  Color.fromARGB(255, 58, 157, 238),
+                              imagepath: 'assets/breakfast.png',
+                              maintitle: 'Breakfast',
+                              middletitle: 'Bread\nPeanut butter\nApple',
+                              calcount: '525'),
+                          Meals_container(
+                              semicirclecolor:
+                                  Color.fromARGB(255, 92, 167, 228),
+                              maincontainercolor2:
+                                  Color.fromARGB(255, 17, 123, 209),
+                              maincontainercolor1:
+                                  Color.fromARGB(255, 58, 157, 238),
+                              imagepath: 'assets/breakfast.png',
+                              maintitle: 'Breakfast',
+                              middletitle: 'Bread\nPeanut butter\nApple',
+                              calcount: '525'),
+                          Meals_container(
+                              semicirclecolor:
+                                  Color.fromARGB(255, 92, 167, 228),
+                              maincontainercolor2:
+                                  Color.fromARGB(255, 17, 123, 209),
+                              maincontainercolor1:
+                                  Color.fromARGB(255, 58, 157, 238),
+                              imagepath: 'assets/breakfast.png',
+                              maintitle: 'Breakfast',
+                              middletitle: 'Bread\nPeanut butter\nApple',
+                              calcount: '525'),
+                          Meals_container(
+                              semicirclecolor:
+                                  Color.fromARGB(255, 92, 167, 228),
+                              maincontainercolor2:
+                                  Color.fromARGB(255, 17, 123, 209),
+                              maincontainercolor1:
+                                  Color.fromARGB(255, 58, 157, 238),
+                              imagepath: 'assets/breakfast.png',
+                              maintitle: 'Breakfast',
+                              middletitle: 'Bread\nPeanut butter\nApple',
+                              calcount: '525'),
+                        ],
+                      ))
                 ],
               ),
             ],
