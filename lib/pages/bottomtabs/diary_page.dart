@@ -294,6 +294,7 @@ class Diary_page extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
+                          //1
                           Meals_container(
                               semicirclecolor:
                                   Color.fromARGB(255, 92, 167, 228),
@@ -305,39 +306,42 @@ class Diary_page extends StatelessWidget {
                               maintitle: 'Breakfast',
                               middletitle: 'Bread\nPeanut butter\nApple',
                               calcount: '525'),
+                          //2
                           Meals_container(
                               semicirclecolor:
-                                  Color.fromARGB(255, 92, 167, 228),
+                                  Color.fromARGB(255, 187, 96, 230),
                               maincontainercolor2:
-                                  Color.fromARGB(255, 17, 123, 209),
+                                  Color.fromARGB(255, 137, 67, 216),
                               maincontainercolor1:
-                                  Color.fromARGB(255, 58, 157, 238),
-                              imagepath: 'assets/breakfast.png',
-                              maintitle: 'Breakfast',
-                              middletitle: 'Bread\nPeanut butter\nApple',
-                              calcount: '525'),
+                                  Color.fromARGB(255, 160, 50, 233),
+                              imagepath: 'assets/snack.png',
+                              maintitle: 'Snack',
+                              middletitle: 'Recommend',
+                              calcount: '800'),
+                          //3
                           Meals_container(
                               semicirclecolor:
-                                  Color.fromARGB(255, 92, 167, 228),
+                                  Color.fromARGB(255, 126, 233, 131),
                               maincontainercolor2:
-                                  Color.fromARGB(255, 17, 123, 209),
+                                  Color.fromARGB(255, 76, 218, 123),
                               maincontainercolor1:
-                                  Color.fromARGB(255, 58, 157, 238),
-                              imagepath: 'assets/breakfast.png',
-                              maintitle: 'Breakfast',
-                              middletitle: 'Bread\nPeanut butter\nApple',
-                              calcount: '525'),
+                                  Color.fromARGB(255, 96, 235, 61),
+                              imagepath: 'assets/lunch.png',
+                              maintitle: 'Lunch',
+                              middletitle: 'Salmon,\nMixed veggies,\nAvocado',
+                              calcount: '602'),
+                          //4
                           Meals_container(
                               semicirclecolor:
-                                  Color.fromARGB(255, 92, 167, 228),
+                                  Color.fromARGB(255, 109, 129, 238),
                               maincontainercolor2:
-                                  Color.fromARGB(255, 17, 123, 209),
+                                  Color.fromARGB(255, 64, 91, 240),
                               maincontainercolor1:
-                                  Color.fromARGB(255, 58, 157, 238),
-                              imagepath: 'assets/breakfast.png',
-                              maintitle: 'Breakfast',
-                              middletitle: 'Bread\nPeanut butter\nApple',
-                              calcount: '525'),
+                                  Color.fromARGB(255, 52, 68, 158),
+                              imagepath: 'assets/dinner.png',
+                              maintitle: 'Dinner',
+                              middletitle: 'Recommend',
+                              calcount: '703'),
                         ],
                       ))
                 ],
