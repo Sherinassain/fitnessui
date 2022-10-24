@@ -1,6 +1,6 @@
 import 'package:fitnessui/pages/bottomtabs/diary_page.dart';
 import 'package:fitnessui/pages/bottomtabs/home_page.dart';
-import 'package:fitnessui/pages/bottomtabs/me_page.dart';
+import 'package:fitnessui/pages/bottomtabs/wallet_page.dart';
 import 'package:fitnessui/pages/bottomtabs/plans_page.dart';
 import 'package:fitnessui/pages/constants.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class _Navigation_pageState extends State<Navigation_page> {
   final List pages = [
     Home_page(),
     Plans_page(),
-    Me_page(),
+    Wallet_page(),
     Diary_page(),
   ];
 
