@@ -139,7 +139,7 @@ class Plans_page extends StatelessWidget {
                                       child: Text(
                                         'START TRANSFORM',
                                         style: TextStyle(
-                                            color: constantblack,
+                                            color: Colors.blue,
                                             fontWeight: FontWeight.w600,
                                             fontSize: 16),
                                       ),
