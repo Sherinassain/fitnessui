@@ -782,41 +782,7 @@ class Diary_page extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Container(
-                    //   width: double.infinity,
-                    //   height: screensize.width * 0.14,
-                    //   decoration: BoxDecoration(
-                    //       color: const Color.fromARGB(255, 217, 216, 233),
-                    //       borderRadius: BorderRadius.circular(10),
-                    //       boxShadow: const [
-                    //         BoxShadow(
-                    //           color: Colors.red,
-                    //           blurRadius: 10,
-                    //           offset: Offset(0, 5),
-                    //         )
-                    //       ]),
-                    //   child: Stack(
-                    //     clipBehavior: Clip.none,
-                    //     alignment: Alignment.center,
-                    //     children: [
-                    //       Container(
-                    //         alignment: Alignment.center,
-                    //         height: screensize.width * 0.1,
-                    //         width: double.infinity,
-                    //         child: const Text(
-                    //           'Prepare your stomach for lunch with one or two glass of water',
-                    //           maxLines: 2,
-                    //           style: TextStyle(color: Colors.purple),
-                    //         ),
-                    //       ),
-                    //       Image.asset(
-                    //         'assets/glass.png',
-                    //         height: 80,
-                    //         width: 80,
-                    //       )
-                    //     ],
-                    //   ),
-                    // ),
+        
                     SizedBox(
                       height: screensize.width * 0.04,
                     ),
