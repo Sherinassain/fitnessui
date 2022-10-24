@@ -94,7 +94,11 @@ class Plans_page extends StatelessWidget {
                           Container(
                             width: double.infinity,
                             height: screensize.width * 0.65,
-                            decoration: BoxDecoration(color: constantblack),
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(colors: [
+                              Color.fromARGB(255, 56, 145, 218),
+                              Color.fromARGB(255, 123, 187, 240)
+                            ])),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
@@ -106,8 +110,9 @@ class Plans_page extends StatelessWidget {
                                   Text(
                                     'Non-Stop Diwali\n Sale is Live',
                                     style: TextStyle(
-                                        color: constantwhite,
-                                        fontWeight: FontWeight.bold,
+                                        color:
+                                            Color.fromARGB(255, 236, 194, 131),
+                                        fontWeight: FontWeight.w600,
                                         fontSize: 24),
                                   ),
                                   SizedBox(
@@ -205,7 +210,7 @@ class Plans_page extends StatelessWidget {
                             Text(
                               'Based on your fitness goals',
                               style: TextStyle(
-                                  color: constantblack,
+                                  color: Colors.black54,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 18),
                             ),
@@ -216,11 +221,11 @@ class Plans_page extends StatelessWidget {
 //1
                             Ads_container(
                                 imagepath:
-                                    'https://www.mensjournal.com/wp-content/uploads/mf/the-truth-about-post-workout-nutrition-main.jpg?w=900&h=506&crop=1&quality=86&strip=all',
-                                maintitle1: 'Smart Diet &',
-                                maintitle2: 'Workout Plan',
+                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeg2SHiREkLYrGgbBdZp_H5s5yqwqRklFKMQ&usqp=CAU',
+                                maintitle1: 'Smart',
+                                maintitle2: 'Diet',
                                 maintitlecolor1: constantwhite,
-                                maintitlecolor2: constantwhite,
+                                maintitlecolor2: Colors.blue,
                                 subtitle: 'Starts at \$199 per month',
                                 linemain:
                                     'Our Ai Powered plan to help you gain 3 kgs',
@@ -230,7 +235,7 @@ class Plans_page extends StatelessWidget {
                                 line2: 'Customizable Workout Routine',
                                 icon3: Icons.health_and_safety,
                                 line3: 'Ria-Your ai Coach & Assistant',
-                                buttoncolor: Colors.red,
+                                buttoncolor: Colors.blue,
                                 buttontitle: 'EXPLORE SMART'),
                             //2
                             Ads_container(
