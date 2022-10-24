@@ -1,4 +1,5 @@
 import 'package:fitnessui/pages/constants.dart';
+import 'package:fitnessui/pages/container/home/for_item_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -343,61 +344,15 @@ class Home_page extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(
-                            width: screensize.width * 0.4,
-                            height: screensize.width * 0.4,
-                            decoration: BoxDecoration(
-                                color: constantwhite,
-                                borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.grey,
-                                      blurRadius: 1,
-                                      blurStyle: BlurStyle.outer)
-                                ]),
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: screensize.width * 0.04,
-                                ),
-                                CircularPercentIndicator(
-                                  radius: 35,
-                                  center: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: CircleAvatar(
-                                      radius: 30,
-                                      backgroundColor: Colors.transparent,
-                                      backgroundImage: NetworkImage(
-                                          'https://cdn-icons-png.flaticon.com/128/1869/1869315.png'),
-                                    ),
-                                  ),
-                                  backgroundColor:
-                                      Color.fromARGB(255, 238, 235, 235),
-                                ),
-                                SizedBox(
-                                  height: screensize.width * 0.02,
-                                ),
-                                Text(
-                                  'Burn at least',
-                                  style: TextStyle(
-                                      color: constantblack,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 18),
-                                ),
-                                SizedBox(
-                                  height: screensize.width * 0.01,
-                                ),
-                                Text(
-                                  '483 Cal',
-                                  style: TextStyle(
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 15),
-                                ),
-                              ],
-                            ),
-                          ),
+                          //1st
+                          For_item_containers(
+                              imagepath:
+                                  'https://cdn-icons-png.flaticon.com/128/1869/1869315.png',
+                              title: 'Burn at least',
+                              subtitle: '483 Cal'),
+
                           //2
+
                           Container(
                             width: screensize.width * 0.4,
                             height: screensize.width * 0.4,
@@ -484,7 +439,7 @@ class Home_page extends StatelessWidget {
                                   height: screensize.width * 0.02,
                                 ),
                                 Text(
-                                  'Burn at least',
+                                  'Track your steps',
                                   style: TextStyle(
                                       color: constantblack,
                                       fontWeight: FontWeight.w600,
@@ -494,7 +449,7 @@ class Home_page extends StatelessWidget {
                                   height: screensize.width * 0.01,
                                 ),
                                 Text(
-                                  '483 Cal',
+                                  'Connect now',
                                   style: TextStyle(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.w600,
@@ -504,12 +459,72 @@ class Home_page extends StatelessWidget {
                             ),
                           )
                         ],
+                      ), //2ndroe 1st
+                      SizedBox(
+                        height: screensize.width * 0.06,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          //2nd row 1st
+                          For_item_containers(
+                              imagepath:
+                                  'https://cdn-icons-png.flaticon.com/128/6142/6142606.png',
+                              title: 'Drink 7 glasses',
+                              subtitle: 'of water'),
+                          //2nd row 2nd
+                          For_item_containers(
+                              imagepath:
+                                  'https://cdn-icons-png.flaticon.com/128/7407/7407320.png',
+                              title: 'Gain 3.0 kg',
+                              subtitle: '0.0 of 3.0 kg gained'),
+                        ],
                       )
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: screensize.width * 0.04,
+                  ),
+                  Container(
+                    height: screensize.width * 0.16,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: constantwhite,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey,
+                              blurRadius: 2,
+                              blurStyle: BlurStyle.outer)
+                        ]),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'View All Trackers',
+                            style: TextStyle(
+                                color: constantblack,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(right: screensize.width * 0.03),
+                            child: Icon(
+                              Icons.arrow_forward_ios,
+                              color: constantblack,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
+            //final container
           ],
         ),
       ],
