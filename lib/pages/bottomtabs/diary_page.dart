@@ -275,7 +275,7 @@ class Diary_page extends StatelessWidget {
                             Text(
                               'Customize',
                               style: TextStyle(
-                                  color: Colors.blue,
+                                  color: Color.fromARGB(255, 10, 27, 180),
                                   fontWeight: FontWeight.w600,
                                   fontSize: 18),
                             ),
@@ -372,7 +372,7 @@ class Diary_page extends StatelessWidget {
                             Text(
                               'Today',
                               style: TextStyle(
-                                  color: Colors.blue,
+                                  color: Color.fromARGB(255, 10, 27, 180),
                                   fontWeight: FontWeight.w600,
                                   fontSize: 18),
                             ),
@@ -433,7 +433,8 @@ class Diary_page extends StatelessWidget {
                                     Text(
                                       '206.8',
                                       style: TextStyle(
-                                          color: Colors.blue,
+                                          color:
+                                              Color.fromARGB(255, 10, 27, 180),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 28),
                                     ),
@@ -443,7 +444,8 @@ class Diary_page extends StatelessWidget {
                                     Text(
                                       'lbs',
                                       style: TextStyle(
-                                          color: Colors.blue,
+                                          color:
+                                              Color.fromARGB(255, 10, 27, 180),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 22),
                                     ),
@@ -482,7 +484,8 @@ class Diary_page extends StatelessWidget {
                                     Text(
                                       '  inBody SmartScale',
                                       style: TextStyle(
-                                          color: Colors.blue,
+                                          color:
+                                              Color.fromARGB(255, 10, 27, 180),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16),
                                     ),
@@ -543,7 +546,7 @@ class Diary_page extends StatelessWidget {
                             Text(
                               'Aqua SmartBottle',
                               style: TextStyle(
-                                  color: Colors.blue,
+                                  color: Color.fromARGB(255, 10, 27, 180),
                                   fontWeight: FontWeight.w600,
                                   fontSize: 18),
                             ),
@@ -596,7 +599,8 @@ class Diary_page extends StatelessWidget {
                                         Text(
                                           '2100',
                                           style: TextStyle(
-                                              color: Colors.blue,
+                                              color: Color.fromARGB(
+                                                  255, 10, 27, 180),
                                               fontWeight: FontWeight.bold,
                                               fontSize: 28),
                                         ),
@@ -606,7 +610,8 @@ class Diary_page extends StatelessWidget {
                                         Text(
                                           'ml',
                                           style: TextStyle(
-                                              color: Colors.blue,
+                                              color: Color.fromARGB(
+                                                  255, 10, 27, 180),
                                               fontWeight: FontWeight.bold,
                                               fontSize: 22),
                                         ),
@@ -782,7 +787,6 @@ class Diary_page extends StatelessWidget {
                         ),
                       ],
                     ),
-        
                     SizedBox(
                       height: screensize.width * 0.04,
                     ),
