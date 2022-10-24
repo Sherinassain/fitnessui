@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:fitnessui/pages/container/money/money_item_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -182,62 +183,27 @@ class Wallet_page extends StatelessWidget {
                 borderRadius: BorderRadius.circular(3),
               ),
             ),
-            SizedBox(
-              height: screensize.width * 0.018,
-            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      Container(
-                          width: screensize.width * 0.14,
-                          height: screensize.width * 0.14,
-                          decoration: BoxDecoration(boxShadow: [
-                            BoxShadow(
-                                blurRadius: 2,
-                                color: Colors.grey,
-                                blurStyle: BlurStyle.outer)
-                          ], color: Colors.white54, shape: BoxShape.circle),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: ImageIcon(
-                              NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/128/616/616494.png'),
-                              color: Colors.yellow,
-                            ),
-                          )),
-                      SizedBox(
-                        width: screensize.width * 0.05,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'One-click checkout',
-                            style: TextStyle(
-                                color: constantblack,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: screensize.width * 0.015,
-                          ),
-                          Text(
-                            'No need to wait for OTPs-payments get\nprocessed instantly',
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14),
-                          ),
-                        ],
-                      )
-                    ],
+                  //items
+
+                  SizedBox(
+                    height: screensize.width * 0.04,
                   ),
+                  //1st item
+                  Money_item_containers(
+                      imagepath:
+                          'https://cdn-icons-png.flaticon.com/128/616/616494.png',
+                      title: 'One-click checkout',
+                      subtitle:
+                          "No need to wait for OTP's-payments get\nprocessed instantly"),
+
                   SizedBox(
                     height: screensize.width * 0.05,
                   ),
+
                   Container(
                     width: double.infinity,
                     height: screensize.width * 0.003,
@@ -246,6 +212,17 @@ class Wallet_page extends StatelessWidget {
                       borderRadius: BorderRadius.circular(3),
                     ),
                   ),
+
+                  SizedBox(
+                    height: screensize.width * 0.04,
+                  ),
+                  //2nd item
+                  Money_item_containers(
+                      imagepath:
+                          'https://cdn-icons-png.flaticon.com/128/1161/1161388.png',
+                      title: 'Safe and secure',
+                      subtitle:
+                          "Stay protected with bank-grade security\nwhile making payments"),
                 ],
               ),
             )
