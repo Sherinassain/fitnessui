@@ -1,10 +1,14 @@
+import 'dart:math';
+
 import 'package:fitnessui/pages/constants.dart';
 import 'package:fitnessui/pages/container/home/burned_eatan_container.dart';
 import 'package:fitnessui/pages/container/home/cal_protein_fat_container.dart';
+import 'package:fitnessui/pages/container/home/heightandweight_containers.dart';
 import 'package:fitnessui/pages/container/home/meals_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -388,9 +392,16 @@ class Diary_page extends StatelessWidget {
                     ),
                     Container(
                       width: double.infinity,
-                      height: screensize.width * 0.48,
+                      height: screensize.width * 0.53,
                       decoration: BoxDecoration(
-                          color: Colors.deepPurple,
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 2,
+                              color: Colors.grey,
+                              blurStyle: BlurStyle.outer,
+                            ),
+                          ],
+                          color: constantwhite,
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(80),
@@ -430,7 +441,7 @@ class Diary_page extends StatelessWidget {
                                       width: screensize.width * 0.03,
                                     ),
                                     Text(
-                                      'ibs',
+                                      'lbs',
                                       style: TextStyle(
                                           color: Colors.blue,
                                           fontWeight: FontWeight.bold,
@@ -472,17 +483,305 @@ class Diary_page extends StatelessWidget {
                                       '  inBody SmartScale',
                                       style: TextStyle(
                                           color: Colors.blue,
-                                          fontWeight: FontWeight.w400,
+                                          fontWeight: FontWeight.bold,
                                           fontSize: 16),
                                     ),
                                   ],
                                 )
                               ],
-                            )
+                            ),
+                            SizedBox(
+                              height: screensize.width * 0.03,
+                            ),
+                            Container(
+                              width: screensize.width * 0.88,
+                              height: screensize.width * 0.006,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                            ),
+                            SizedBox(
+                              height: screensize.width * 0.05,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                //height and weight containers
+                                Heightand_weight_container(
+                                    maintitle: '185 cm', subtitle: 'Height'),
+                                Heightand_weight_container(
+                                    maintitle: '27.3 BMI',
+                                    subtitle: 'Overweight'),
+                                Heightand_weight_container(
+                                    maintitle: '20%', subtitle: 'Body fat'),
+                              ],
+                            ),
                           ],
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: screensize.width * 0.06,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Water',
+                              style: TextStyle(
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              'Aqua SmartBottle',
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18),
+                            ),
+                            SizedBox(
+                              width: screensize.width * 0.01,
+                            ),
+                            Icon(
+                              Icons.arrow_forward,
+                              color: Colors.black54,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: screensize.width * 0.07,
+                    ),
+                    Stack(
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          height: screensize.width * 0.565,
+                          decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 2,
+                                  color: Colors.grey,
+                                  blurStyle: BlurStyle.outer,
+                                ),
+                              ],
+                              color: constantwhite,
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(80),
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: screensize.width * 0.05,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text(
+                                          '2100',
+                                          style: TextStyle(
+                                              color: Colors.blue,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 28),
+                                        ),
+                                        SizedBox(
+                                          width: screensize.width * 0.03,
+                                        ),
+                                        Text(
+                                          'ml',
+                                          style: TextStyle(
+                                              color: Colors.blue,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 22),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: screensize.width * 0.02,
+                                    ),
+                                    Text(
+                                      'of daily goal 3.5L',
+                                      style: TextStyle(
+                                          color: constantblack,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 19),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: screensize.width * 0.06,
+                                ),
+                                Container(
+                                  width: screensize.width * 0.5,
+                                  height: screensize.width * 0.006,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey,
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: screensize.width * 0.08,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.history,
+                                          color: Colors.grey,
+                                        ),
+                                        SizedBox(
+                                          width: screensize.width * 0.01,
+                                        ),
+                                        Text(
+                                          'Last drink',
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 17),
+                                        ),
+                                        SizedBox(
+                                          width: screensize.width * 0.01,
+                                        ),
+                                        Text(
+                                          '8:26 AM',
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: screensize.width * 0.01,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Transform.rotate(
+                                          angle: 25 * pi / 180,
+                                          child: Icon(
+                                            Icons.notifications,
+                                            color: Color.fromARGB(
+                                                255, 213, 25, 219),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: screensize.width * 0.015,
+                                        ),
+                                        Text(
+                                          'Your bottle is empty, refill\nit!',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 213, 25, 219),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: screensize.width * 0.72,
+                          top: screensize.width * 0.14,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50)),
+                            padding: const EdgeInsets.all(5),
+                            height: 130,
+                            width: 65,
+                            child: LiquidLinearProgressIndicator(
+                              borderRadius: 50,
+                              backgroundColor: Colors.grey[200],
+                              value: 0.5,
+                              borderColor: Colors.white,
+                              borderWidth: 0.1,
+                              center: const Padding(
+                                padding: EdgeInsets.only(top: 30.0),
+                                child: Text(
+                                  '60%',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              valueColor: const AlwaysStoppedAnimation(
+                                  Color.fromARGB(255, 17, 55, 144)),
+                              direction: Axis.vertical,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: screensize.width * 0.6,
+                          top: screensize.width * 0.2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Material(
+                                elevation: 10,
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(100)),
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 30,
+                                  width: 30,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle),
+                                  child: const Icon(
+                                    Icons.add,
+                                    color: Color.fromARGB(255, 8, 69, 118),
+                                    size: 20,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: screensize.width * 0.06,
+                              ),
+                              Material(
+                                elevation: 10,
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(100)),
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 30,
+                                  width: 30,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle),
+                                  child: const Icon(
+                                    Icons.minimize_outlined,
+                                    color: Color.fromARGB(255, 8, 69, 118),
+                                    size: 20,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
