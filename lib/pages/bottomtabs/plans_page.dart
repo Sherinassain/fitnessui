@@ -12,6 +12,14 @@ class Plans_page extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size screensize = MediaQuery.of(context).size;
     return Scaffold(
+      floatingActionButton:FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.green,
+          child: Icon(
+            Icons.comment,
+            color: constantwhite,
+          ),
+        ) ,
         body: SafeArea(
             child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
