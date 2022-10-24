@@ -9,7 +9,7 @@ class Ads_container extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        final Size screensize = MediaQuery.of(context).size;
+    final Size screensize = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
       height: screensize.height * 0.53,
@@ -43,6 +43,42 @@ class Ads_container extends StatelessWidget {
                           image: NetworkImage(
                               'https://www.mensjournal.com/wp-content/uploads/mf/the-truth-about-post-workout-nutrition-main.jpg?w=900&h=506&crop=1&quality=86&strip=all'),
                           fit: BoxFit.cover)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Smart Diet &',
+                              style: TextStyle(
+                                  color: constantwhite,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 26),
+                            ),
+                            Text(
+                              ' Workout Plan',
+                              style: TextStyle(
+                                  color: constantwhite,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 26),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: screensize.width * 0.28,
+                        ),
+                        Text(
+                          'Starts at \$199 per month',
+                          style: TextStyle(
+                              color: constantwhite,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: screensize.width * 0.05,
