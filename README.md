@@ -1,3 +1,4 @@
+![pic2](https://user-images.githubusercontent.com/110900935/197596753-07ef95d6-a8ed-4db9-b4fd-dbb9cd0047ba.png)
 ![pic3](https://user-images.githubusercontent.com/110900935/197596630-e101da5b-29da-4d73-a2dd-099f2303e5b9.png)
 # fitnessui
 
