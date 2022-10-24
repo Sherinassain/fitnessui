@@ -50,7 +50,7 @@ class _Navigation_pageState extends State<Navigation_page> {
                   icon: Icon(Icons.published_with_changes_outlined),
                   label: 'Plans'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.wallet_giftcard), label: 'MOney'),
+                  icon: Icon(Icons.wallet_giftcard), label: 'Money'),
               BottomNavigationBarItem(
                   icon: Icon(Icons.library_books), label: 'Diary')
             ]),
