@@ -782,6 +782,79 @@ class Diary_page extends StatelessWidget {
                         ),
                       ],
                     ),
+                    // Container(
+                    //   width: double.infinity,
+                    //   height: screensize.width * 0.14,
+                    //   decoration: BoxDecoration(
+                    //       color: const Color.fromARGB(255, 217, 216, 233),
+                    //       borderRadius: BorderRadius.circular(10),
+                    //       boxShadow: const [
+                    //         BoxShadow(
+                    //           color: Colors.red,
+                    //           blurRadius: 10,
+                    //           offset: Offset(0, 5),
+                    //         )
+                    //       ]),
+                    //   child: Stack(
+                    //     clipBehavior: Clip.none,
+                    //     alignment: Alignment.center,
+                    //     children: [
+                    //       Container(
+                    //         alignment: Alignment.center,
+                    //         height: screensize.width * 0.1,
+                    //         width: double.infinity,
+                    //         child: const Text(
+                    //           'Prepare your stomach for lunch with one or two glass of water',
+                    //           maxLines: 2,
+                    //           style: TextStyle(color: Colors.purple),
+                    //         ),
+                    //       ),
+                    //       Image.asset(
+                    //         'assets/glass.png',
+                    //         height: 80,
+                    //         width: 80,
+                    //       )
+                    //     ],
+                    //   ),
+                    // ),
+                    SizedBox(
+                      height: screensize.width * 0.04,
+                    ),
+                    Stack(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: screensize.width * 0.04),
+                          height: screensize.width * 0.16,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color.fromARGB(255, 156, 155, 212)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Prepare your stomach for lunch with\none or two glass of water',
+                                maxLines: 2,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: Color.fromARGB(255, 22, 58, 218)),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          bottom: screensize.width * 0.04,
+                          child: Transform.rotate(
+                            angle: 10 * pi / 180,
+                            child: Image.asset(
+                              'assets/glass.png',
+                              height: 80,
+                              width: 80,
+                            ),
+                          ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
