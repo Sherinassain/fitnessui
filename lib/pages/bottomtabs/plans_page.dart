@@ -259,6 +259,29 @@ class Plans_page extends StatelessWidget {
                             line3: 'HealthifyMe Smart Scale',
                             buttoncolor: Colors.blue,
                             buttontitle: 'KNOW MORE'),
+                        SizedBox(
+                          height: screensize.width * 0.05,
+                        ),
+                        Padding(
+                          padding:
+                              EdgeInsets.only(left: screensize.width * 0.24),
+                          child: Container(
+                            width: screensize.width * 0.47,
+                            height: screensize.width * 0.1,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 66, 152, 223),
+                                borderRadius: BorderRadius.circular(22)),
+                            child: Center(
+                              child: Text(
+                                'VIEW OTHER PLANS',
+                                style: TextStyle(
+                                    color: constantwhite,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16),
+                              ),
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   )
